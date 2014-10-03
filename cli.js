@@ -14,7 +14,12 @@ function help() {
       '  ' + pkg.description,
     '',
     '  Example',
-    '    shelfies-amazon-linker ',
+    '    shelfies-amazon-linker why nations fail',
+    '',
+    '    Looking up: "why nations fail"',
+    '    [Why Nations Fail](http://www.amazon.com/Why-Nations-Fail-Origins-Prosperity/dp/0307719227) - *The Origins of Power, Prosperity, and Poverty*',
+    '',
+    '    Copied to your clipboard',
     ''
   ].join('\n'));
 }
