@@ -1,0 +1,33 @@
+{
+  "name": "shelfies-amazon-linker",
+  "version": "0.1.0",
+  "description": "get markdown formatted string from book title",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "bin": {
+    "shelfies-amazon-linker": "cli.js"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matiassingers/shelfies-amazon-linker"
+  },
+  "author": "Matias Singers <mail@matiassingers.com> (http://mts.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matiassingers/shelfies-amazon-linker/issues"
+  },
+  "homepage": "https://github.com/matiassingers/shelfies-amazon-linker",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
