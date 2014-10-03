@@ -22,7 +22,17 @@ Please ensure that these are set before running the package.
 ```js
 var shelfiesAmazonLinker = require('shelfies-amazon-linker');
 
-shelfiesAmazonLinker()
+shelfiesAmazonLinker('why nations fail', function(err, result){
+  if(err){
+    // handle the error
+  }
+  
+  console.log(result);
+  // => { url: 'http://www.amazon.com/Why-Nations-Fail-Origins-Prosperity/dp/0307719227',
+  //      title: 'Why Nations Fail',
+  //      subtitle: 'The Origins of Power, Prosperity, and Poverty',
+  //      markdown: '[Why Nations Fail](http://www.amazon.com/Why-Nations-Fail-Origins-Prosperity/dp/0307719227) - *The Origins of Power, Prosperity, and Poverty*' }
+});
 
 ```
 
