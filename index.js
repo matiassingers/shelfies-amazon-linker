@@ -19,6 +19,7 @@ module.exports = function(title, cb) {
 
     var originalUrl = results[0].DetailPageURL[0];
     var fullTitle = results[0].ItemAttributes[0].Title[0];
+    var authors = results[0].ItemAttributes[0].Author;
 
     var url = originalUrl.split('%3FSubscriptionId')[0].trim();
 
@@ -33,6 +34,7 @@ module.exports = function(title, cb) {
 
     cb(null, {
       url: url,
+      authors: authors,
       title: title,
       subtitle: subtitle,
       markdown: markdownString.join('')

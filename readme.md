@@ -32,6 +32,7 @@ shelfiesAmazonLinker('why nations fail', function(err, result){
   
   console.log(result);
   // => { url: 'http://www.amazon.com/Why-Nations-Fail-Origins-Prosperity/dp/0307719227',
+  //      author: [ 'Daron Acemoglu', 'James Robinson' ],
   //      title: 'Why Nations Fail',
   //      subtitle: 'The Origins of Power, Prosperity, and Poverty',
   //      markdown: '[Why Nations Fail](http://www.amazon.com/Why-Nations-Fail-Origins-Prosperity/dp/0307719227) - *The Origins of Power, Prosperity, and Poverty*' }
@@ -55,6 +56,7 @@ $ shelfies-amazon-linker --help
     shelfies-amazon-linker why nations fail
     
     Looking up: "why nations fail"
+    Authors: [ 'Daron Acemoglu', 'James Robinson' ]
     [Why Nations Fail](http://www.amazon.com/Why-Nations-Fail-Origins-Prosperity/dp/0307719227) - *The Origins of Power, Prosperity, and Poverty*
     
     Copied to your clipboard

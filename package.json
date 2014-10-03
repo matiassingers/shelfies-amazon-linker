@@ -1,6 +1,6 @@
 {
   "name": "shelfies-amazon-linker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "get markdown formatted string from book title",
   "main": "index.js",
   "scripts": {
