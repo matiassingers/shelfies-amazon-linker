@@ -36,8 +36,6 @@ shelfiesAmazonLinker(argv.join(' '), function(err, result){
     return console.log(chalk.red('\nAn error occured, please try again.'));
   }
 
-  console.log(result);
-
   console.log(chalk.inverse(result.markdown));
 
   copypaste.copy(result.markdown);

@@ -43,11 +43,18 @@ shelfiesAmazonLinker('why nations fail', function(err, result){
 $ npm install --global shelfies-amazon-linker
 ```
 
+The command-line tool joins every parameter into a string, allows the user to omit quotes around the search term.
+
 ```sh
 $ shelfies-amazon-linker --help
 
   Example
-    shelfies-amazon-linker
+    shelfies-amazon-linker why nations fail
+    
+    Looking up: "why nations fail"
+    [Why Nations Fail](http://www.amazon.com/Why-Nations-Fail-Origins-Prosperity/dp/0307719227) - *The Origins of Power, Prosperity, and Poverty*
+    
+    Copied to your clipboard
     
 ```
 
