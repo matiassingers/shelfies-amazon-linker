@@ -10,6 +10,15 @@ $ npm install --save shelfies-amazon-linker
 
 ## Usage
 
+The [Amazon Product Advertising API](https://affiliate-program.amazon.com/gp/advertising/api/detail/main.html) requires the following credentials to be passed with every single call:
+- AWS access key ID - `AWS_ID`
+- AWS secret access key - `AWS_SECRET`
+- Amazon associate tag - `AWS_TAG`
+
+shelfies-amazon-linker looks for these values in environment variables named: `AWS_ID`, `AWS_SECRET` and `AWS_TAG`. 
+Please ensure that these are set before running the package.
+
+
 ```js
 var shelfiesAmazonLinker = require('shelfies-amazon-linker');
 
