@@ -1,6 +1,9 @@
 # shelfies-amazon-linker [![Build Status](http://img.shields.io/travis/matiassingers/shelfies-amazon-linker.svg?style=flat-square)](https://travis-ci.org/matiassingers/shelfies-amazon-linker) [![Dependency Status](http://img.shields.io/gemnasium/matiassingers/shelfies-amazon-linker.svg?style=flat-square)](https://gemnasium.com/matiassingers/shelfies-amazon-linker)
 > get markdown formatted string from book title
 
+A quick CLI tool to get Markdown formatted strings to be used in the documentation of [topshelfie.co](http://topshelfie.co/).
+Want to help? Head over to the repo [kyro/shelfies](https://github.com/kyro/shelfies).
+
 ## Install
 
 ```sh
