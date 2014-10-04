@@ -4,6 +4,11 @@
 A quick CLI tool to get Markdown formatted strings to be used in the documentation of [topshelfie.co](http://topshelfie.co/).
 Want to help? Head over to the repo [kyro/shelfies](https://github.com/kyro/shelfies).
 
+The final Markdown formatted string looks like this with the book sub/alternate title:
+```md
+[Why Nations Fail](http://www.amazon.com/Why-Nations-Fail-Origins-Prosperity/dp/0307719227) - *The Origins of Power, Prosperity, and Poverty*
+```
+
 ## Install
 
 ```sh
