@@ -12,32 +12,30 @@ module.exports = function(title, cb) {
     keywords: title,
     searchIndex: 'Books',
     responseGroup: 'ItemAttributes'
-  }, function(err, results) {
-    if(err) {
-      return cb(err);
-    }
+  })
+    .then(function(results) {
+      var originalUrl = results[0].DetailPageURL[0];
+      var fullTitle = results[0].ItemAttributes[0].Title[0];
+      var authors = results[0].ItemAttributes[0].Author;
 
-    var originalUrl = results[0].DetailPageURL[0];
-    var fullTitle = results[0].ItemAttributes[0].Title[0];
-    var authors = results[0].ItemAttributes[0].Author;
+      var url = originalUrl.split('%3FSubscriptionId')[0].trim();
 
-    var url = originalUrl.split('%3FSubscriptionId')[0].trim();
+      var hasSubtitle = (fullTitle.indexOf(':') !== -1);
+      var title = hasSubtitle ? fullTitle.split(':')[0].trim() : fullTitle;
+      var subtitle = hasSubtitle ? fullTitle.split(':')[1].trim() : void 0;
 
-    var hasSubtitle = (fullTitle.indexOf(':') !== -1);
-    var title = hasSubtitle ? fullTitle.split(':')[0].trim() : fullTitle;
-    var subtitle = hasSubtitle ? fullTitle.split(':')[1].trim() : void 0;
+      var markdownString = ['[', title, '](', url, ')'];
+      if(subtitle){
+        markdownString.push(' - *', subtitle, '*');
+      }
 
-    var markdownString = ['[', title, '](', url, ')'];
-    if(subtitle){
-      markdownString.push(' - *', subtitle, '*');
-    }
-
-    cb(null, {
-      url: url,
-      authors: authors,
-      title: title,
-      subtitle: subtitle,
-      markdown: markdownString.join('')
-    });
-  });
+      cb(null, {
+        url: url,
+        authors: authors,
+        title: title,
+        subtitle: subtitle,
+        markdown: markdownString.join('')
+      });
+    })
+    .catch(cb);
 };
