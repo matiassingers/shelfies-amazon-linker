@@ -15,6 +15,10 @@ module.exports = function(title, cb) {
   };
   client.itemSearch(query)
     .then(function(results) {
+      if(!results[0]){
+        throw new Error('No results returned from API');
+      }
+
       var originalUrl = results[0].DetailPageURL[0];
       var fullTitle = results[0].ItemAttributes[0].Title[0];
       var authors = results[0].ItemAttributes[0].Author;
