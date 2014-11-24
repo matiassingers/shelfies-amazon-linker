@@ -27,9 +27,9 @@
   },
   "homepage": "https://github.com/matiassingers/shelfies-amazon-linker",
   "dependencies": {
-    "amazon-product-api": "~0.1.2",
-    "copy-paste": "~0.3.0",
-    "chalk": "~0.5.1"
+    "amazon-product-api": "0.1.2",
+    "copy-paste": "1.0.1",
+    "chalk": "0.5.1"
   },
   "devDependencies": {
     "mocha": "^2.0.0"
